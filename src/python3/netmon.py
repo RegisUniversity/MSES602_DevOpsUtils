@@ -2,14 +2,12 @@
 
 # monitor_wifi.py
 import os
-import psutil
 import urllib3
-import subprocess
 
 from time import sleep
 from datetime import datetime
 
-SLEEP_TIME = 10 * 60
+SLEEP_TIME = 1 * 60
 
 def is_internet_on(method=2):
     """Check if the Internet connection is on."""
@@ -34,7 +32,7 @@ def main():
             print('# network is up')
             pass
 
-        print('# sleeping...')
+        print ('# sleeping for ' +  str(SLEEP_TIME) + ' seconds...')
         sleep(SLEEP_TIME)
 
 
